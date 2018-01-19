@@ -1,0 +1,46 @@
+---
+title: "Stat 450 Assignment 1"
+author: "Jason Dong"
+date: "January 18, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### A couple of sentences about myself
+
+I am a fourth year Statistics major graduating this May. I currently work at Best Buy Corporate as a data analyst, primarily working on configuration management and inventory compilation. I used to play video games semi-professionally and also for UBC.
+
+### My favorite equation
+
+My favorite equation is the quadratic formula:
+
+$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$ 
+
+where the general quadratic equation is
+
+$ax^2+bx+c=0$
+
+It is a simplistic method of finding the roots of the quadratic equation. Or in other terms, the x-values at which the parabola given by the quadratic equation crosses the x-axis. The quadratic formula is my favorite due to its many applications in real life, such as modelling the distance equation in physics, or price optimization in business.
+
+### My favorite data set
+
+I am very interested in what makes people happy. 
+This dataset ranks countries based on a happiness score, which is dependent on information about GDP per Capita, life expectancy, freedom, generosity, and government corruption.
+
+
+### First five rows of dataset
+```{r}
+library(knitr)
+setwd("C:/Users/jasonxd/Downloads")
+dat<-read.csv("2017.csv")
+kable(dat[1:5,])
+```
+
+### Plot of happiness score against GDP per capita
+
+```{r}
+plot(dat$Happiness.Score, dat$Economy..GDP.per.Capita)
+```
